@@ -1,0 +1,286 @@
+/* 리셋하는거 gpt한테 물어봄 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+    background-color: #f5f6f8;
+    color: #333;
+}
+
+.container {
+    max-width: 430px;
+    margin: 0 auto;
+    background-color: #f5f6f8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #f5f6f8;
+}
+
+.area {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+}
+
+.location-icon,
+.notification-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+    flex: 1;
+    padding: 0 16px;
+    overflow-y: auto; /* 스크롤 */
+}
+
+/* Bank Section */
+.bank-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* 계좌 블록 */
+.account-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f2f3f5;
+}
+
+.account-item:last-child {
+    border-bottom: none;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+}
+
+.account-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.tossBank {
+    background-color: #d7e5fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-name {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.account-balance {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.account-balance-container {
+    display: flex;
+    align-items: center;
+}
+
+.account-change {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.account-change.positive {
+    color: #f45b69;
+}
+
+.transfer-button {
+    background-color: #f2f3f5;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.view-more-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    color: #555;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* 소비블록 */
+.bill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f2f3f5;
+}
+
+.bill-item:last-child {
+    border-bottom: none;
+}
+
+.bill-info {
+    display: flex;
+    align-items: center;
+}
+
+.bill-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+
+.due-icon {
+    background-color: #5573ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.bill-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.bill-name {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.bill-amount {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.new-item-badge {
+    background-color: #eef1fd;
+    color: #4c80f1;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* 신용점수 블록 */
+.credit-score-row {
+    display: flex;
+    align-items: center;
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #e2e6eb;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.credit-score-text {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.actions-section {
+    display: flex;
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+
+.action-button {
+    flex: 1;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #e2e6eb;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+.action-button:first-child {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+
+.action-button:last-child {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+}
+
+/* 하단 네비게이션 */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    background-color: #fff;
+    border-top: 1px solid #e2e6eb;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.nav-text {
+    font-size: 12px;
+    color: #8e959e;
+}
